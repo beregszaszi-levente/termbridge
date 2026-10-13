@@ -1,3 +1,8 @@
+window.va =
+  window.va ||
+  function () {
+    (window.vaq = window.vaq || []).push(arguments);
+  };
 (function () {
   // 1. FAQ ACCORDION INTERACTIVITY
   const accordionBtns = document.querySelectorAll(".accordion-btn");
