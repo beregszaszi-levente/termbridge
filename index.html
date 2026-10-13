@@ -1,0 +1,1564 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed-dim": "#4edea3",
+              "on-error-container": "#ffdad6",
+              "on-surface-variant": "#bcc9cd",
+              "surface-container-low": "#131b2e",
+              "surface-dim": "#0b1326",
+              "surface-bright": "#31394d",
+              "on-primary": "#003640",
+              "on-secondary-fixed": "#002113",
+              "primary-fixed": "#acedff",
+              "on-secondary-fixed-variant": "#005236",
+              background: "#0b1326",
+              secondary: "#4edea3",
+              "inverse-primary": "#00687a",
+              outline: "#869397",
+              error: "#ffb4ab",
+              "primary-container": "#06b6d4",
+              "tertiary-container": "#9a9dff",
+              surface: "#0b1326",
+              "on-tertiary-fixed": "#07006c",
+              "surface-container": "#171f33",
+              "on-tertiary-fixed-variant": "#2f2ebe",
+              "error-container": "#93000a",
+              "surface-container-highest": "#2d3449",
+              "tertiary-fixed": "#e1e0ff",
+              "surface-container-high": "#222a3d",
+              primary: "#4cd7f6",
+              "on-surface": "#dae2fd",
+              "inverse-on-surface": "#283044",
+              "surface-variant": "#2d3449",
+              "secondary-container": "#00a572",
+              "primary-fixed-dim": "#4cd7f6",
+              "on-primary-container": "#00424f",
+              "inverse-surface": "#dae2fd",
+              "on-tertiary": "#1000a9",
+              "on-error": "#690005",
+              "secondary-fixed": "#6ffbbe",
+              "tertiary-fixed-dim": "#c0c1ff",
+              "on-tertiary-container": "#211cb4",
+              "on-secondary": "#003824",
+              "on-background": "#dae2fd",
+              "on-primary-fixed-variant": "#004e5c",
+              "on-primary-fixed": "#001f26",
+              "surface-tint": "#4cd7f6",
+              "outline-variant": "#3d494c",
+              "surface-container-lowest": "#060e20",
+              "on-secondary-container": "#00311f",
+              tertiary: "#c0c1ff",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              "space-sm": "0.5rem",
+              "space-xs": "0.25rem",
+              margin: "2rem",
+              "space-xl": "2.5rem",
+              "space-md": "1rem",
+              "space-lg": "1.5rem",
+              gutter: "1.5rem",
+            },
+            fontFamily: {
+              "headline-md": ["Geist"],
+              "body-md": ["Geist"],
+              "label-sm": ["JetBrains Mono"],
+              "headline-xl-mobile": ["Geist"],
+              "headline-lg-mobile": ["Geist"],
+              "headline-lg": ["Geist"],
+              "label-md": ["JetBrains Mono"],
+              "body-lg": ["Geist"],
+              "code-md": ["JetBrains Mono"],
+              "headline-xl": ["Geist"],
+              "body-sm": ["Geist"],
+              "headline-sm": ["Geist"],
+              "code-sm": ["JetBrains Mono"],
+            },
+            fontSize: {
+              "headline-md": [
+                "28px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "500",
+                },
+              ],
+              "body-md": [
+                "15px",
+                {
+                  lineHeight: "24px",
+                  letterSpacing: "-0.005em",
+                  fontWeight: "400",
+                },
+              ],
+              "label-sm": [
+                "11px",
+                {
+                  lineHeight: "14px",
+                  letterSpacing: "0.08em",
+                  fontWeight: "500",
+                },
+              ],
+              "headline-xl-mobile": [
+                "36px",
+                {
+                  lineHeight: "44px",
+                  letterSpacing: "-0.025em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-lg-mobile": [
+                "28px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-lg": [
+                "40px",
+                {
+                  lineHeight: "48px",
+                  letterSpacing: "-0.025em",
+                  fontWeight: "600",
+                },
+              ],
+              "label-md": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.06em",
+                  fontWeight: "500",
+                },
+              ],
+              "body-lg": [
+                "18px",
+                {
+                  lineHeight: "28px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "code-md": [
+                "14px",
+                {
+                  lineHeight: "22px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-xl": [
+                "56px",
+                {
+                  lineHeight: "64px",
+                  letterSpacing: "-0.03em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-sm": [
+                "13px",
+                { lineHeight: "20px", letterSpacing: "0", fontWeight: "400" },
+              ],
+              "headline-sm": [
+                "20px",
+                {
+                  lineHeight: "28px",
+                  letterSpacing: "-0.015em",
+                  fontWeight: "500",
+                },
+              ],
+              "code-sm": [
+                "12px",
+                { lineHeight: "18px", letterSpacing: "0", fontWeight: "400" },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-background font-body-md text-on-surface antialiased">
+    <header
+      class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"
+    >
+      <div
+        class="h-16 max-w-7xl mx-auto px-margin flex items-center justify-between"
+      >
+        <div class="flex items-center gap-space-lg">
+          <a
+            class="flex items-center gap-space-sm"
+            data-path="landing-page"
+            href="#"
+            ><img
+              alt="TermBridge Brand Logo"
+              class="h-8 w-auto object-contain"
+              src="https://lh3.googleusercontent.com/aida/AEtjO1VdtNAgecLe-wjU81TH4-4MunafYnQ4Q3T9LBAMlPNSr42EuCJ8r_wpqob3JgZo3CLzJQOo-e4xh3FII8rFdwXZUdUVvptoa_F9HfnBsWN-KAyzn2Yg9wXYyQKUIkmh2ddzc1cA-tv6bLxv7Nv08PiZELD-S2jXizWpM7HNdr3UB2AHSKmOM4sBp687LWpwXKPPa5EKiVmD9_KjolPGYbQNKSmhWvlUa4UKYOKskTGsGtVVPn6NNfSUF9k"
+            /><span
+              class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold"
+              >TermBridge</span
+            ></a
+          >
+          <nav
+            class="hidden lg:flex items-center gap-space-md ml-space-md"
+            data-active-classes="text-primary font-medium"
+          >
+            <a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="features"
+              href="#design"
+              >Design</a
+            ><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="live-sandbox"
+              href="#oldnew"
+              >Old Vs New</a
+            ><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="curriculum"
+              href="#adv"
+              >Advantage</a
+            ><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="documentation"
+              href="#faq"
+              >FAQ</a
+            ><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="faq"
+              href="#join"
+              >Join</a
+            >
+          </nav>
+        </div>
+        <div class="flex items-center gap-space-md">
+          <a
+            class="hidden sm:flex items-center gap-1.5 px-3 py-2 rounded-xl border border-primary/30 hover:border-primary text-primary hover:text-white bg-surface-container/60 hover:bg-surface-container-high text-label-md font-medium transition-all"
+            href="https://forms.gle/3VsH4SL9xCRbh829A"
+            rel="noopener noreferrer"
+            target="_blank"
+            ><span class="material-symbols-outlined text-[16px]">feedback</span
+            ><span class="">Share you opinion</span></a
+          >
+        </div>
+      </div>
+    </header>
+    <main class="w-full pt-16 bg-background">
+      <div class="flex flex-col w-full">
+        <!-- Top Ambient Glow Field -->
+        <div class="relative w-full overflow-hidden">
+          <div
+            class="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[550px] bg-gradient-to-b from-primary-container/20 via-primary/5 to-transparent blur-3xl opacity-60"
+          ></div>
+          <div
+            class="pointer-events-none absolute top-96 -left-32 w-80 h-80 bg-secondary/10 blur-3xl rounded-full"
+          ></div>
+          <div
+            class="pointer-events-none absolute top-48 -right-32 w-96 h-96 bg-tertiary-container/10 blur-3xl rounded-full"
+          ></div>
+          <!-- 1. HERO SECTION -->
+          <section
+            class="relative max-w-7xl mx-auto px-margin pt-12 pb-24 flex flex-col items-center text-center"
+          >
+            <!-- Announcement Pill -->
+            <a
+              class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-high/70 backdrop-blur-md shadow-sm mb-space-lg group cursor-pointer transition-all hover:bg-surface-container-highest border border-primary/30 hover:border-primary"
+              href="https://forms.gle/3VsH4SL9xCRbh829A"
+              rel="noopener noreferrer"
+              target="_blank"
+              ><span class="flex h-2 w-2 relative"
+                ><span
+                  class="inline-flex rounded-full h-2 w-2 bg-primary animate-pulse"
+                ></span></span
+              ><span
+                class="font-code-sm text-code-sm text-primary tracking-wide font-medium"
+                >Public Opinion Poll</span
+              ><span class="text-outline font-body-sm text-body-sm">•</span
+              ><span
+                class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface transition-colors"
+                >Interactive Terminal Learning</span
+              ><span class="material-symbols-outlined text-[16px] text-primary"
+                >arrow_forward</span
+              ></a
+            >
+            <!-- Main Headline -->
+            <h1
+              class="font-headline-xl text-headline-xl max-w-4xl tracking-tight text-on-surface leading-tight mb-space-md"
+            >
+              Master the Terminal Without Getting Lost in the
+              <span
+                class="bg-gradient-to-r from-primary via-primary-container to-secondary bg-clip-text text-transparent"
+                >Syntax</span
+              >
+            </h1>
+            <!-- Subheadline -->
+            <p
+              class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-space-xl"
+            >
+              An interactive, visual learning platform that teaches ethical
+              hacking and network analysis step-by-step — with real commands,
+              deep theory, and zero command-line friction.
+            </p>
+            <!-- CTA Email Opt-In -->
+            <form
+              class="relative flex flex-col sm:flex-row items-center justify-center gap-space-sm w-full max-w-md mx-auto mb-space-sm transition-all duration-300"
+              id="hero-beta-form"
+            >
+              <input
+                type="hidden"
+                name="access_key"
+                value="b806db70-90d9-496d-a483-37518dc0cf56"
+              />
+
+              <div class="relative w-full">
+                <span
+                  class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]"
+                  >mail</span
+                >
+                <input
+                  class="w-full pl-10 pr-4 py-3 rounded-xl bg-surface-container-high/80 border border-surface-bright/30 focus:border-primary text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none transition-all duration-300"
+                  id="hero-email-input"
+                  name="email"
+                  placeholder="Enter your work or student email..."
+                  required=""
+                  type="email"
+                />
+              </div>
+              <button
+                class="relative overflow-hidden w-full sm:w-auto shrink-0 px-space-lg py-3 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-headline-sm text-label-md font-semibold tracking-wide shadow-[0_0_24px_rgba(6,182,212,0.4)] hover:shadow-[0_0_32px_rgba(6,182,212,0.6)] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 group cursor-pointer border border-transparent"
+                id="hero-submit-btn"
+                type="submit"
+              >
+                <span
+                  class="pointer-events-none absolute inset-0 rounded-xl bg-primary/40 opacity-0 scale-50 transition-all duration-700"
+                  id="hero-btn-burst"
+                ></span>
+                <span
+                  class="relative z-10 flex items-center gap-2 transition-transform duration-300"
+                  id="hero-btn-text"
+                >
+                  <span>Join the Closed Beta</span>
+                  <span
+                    class="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform"
+                    >arrow_forward</span
+                  >
+                </span>
+              </button>
+            </form>
+            <!-- Subtext -->
+            <p
+              class="font-label-sm text-label-sm text-outline flex items-center gap-space-xs justify-center mb-16"
+            >
+              <span class="material-symbols-outlined text-[14px] text-secondary"
+                >verified</span
+              ><span class=""
+                >Free for early adopters. No spam, only launch updates.</span
+              >
+            </p>
+            <!-- HERO INTERACTIVE WORKBENCH PREVIEW -->
+            <div
+              class="w-full text-left rounded-xl bg-surface-container-lowest/80 backdrop-blur-2xl shadow-2xl overflow-hidden"
+            >
+              <!-- Workbench Window Header -->
+              <div
+                class="bg-surface-container-high/80 px-space-md py-2.5 flex items-center justify-between"
+                id="design"
+              >
+                <div class="flex items-center gap-space-sm">
+                  <div class="flex items-center gap-1.5">
+                    <span
+                      class="w-3 h-3 rounded-full bg-error-container block"
+                    ></span>
+                    <span
+                      class="w-3 h-3 rounded-full bg-surface-bright block"
+                    ></span>
+                    <span
+                      class="w-3 h-3 rounded-full bg-secondary-container block"
+                    ></span>
+                  </div>
+                  <div class="h-4 w-[1px] bg-outline-variant mx-1"></div>
+                  <span
+                    class="font-code-sm text-code-sm text-on-surface-variant flex items-center gap-1"
+                  >
+                    <span
+                      class="material-symbols-outlined text-[15px] text-primary"
+                      >lan</span
+                    >
+                    <span class=""
+                      >target-lab-01.sandbox.termbridge.internal</span
+                    >
+                  </span>
+                </div>
+                <div class="flex items-center gap-space-md">
+                  <div class="flex items-center gap-space-xs">
+                    <span
+                      class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary/10 text-primary flex items-center gap-1 border border-surface-bright/30"
+                      ><span
+                        class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"
+                      ></span
+                      >DESIGN CONCEPT PREVIEW</span
+                    ><span
+                      class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-outline flex items-center gap-1"
+                      >NOT FUNCTIONAL TERMINAL</span
+                    >
+                  </div>
+                  <div class="flex items-center gap-1 text-on-surface-variant">
+                    <button class="p-1 hover:text-on-surface">
+                      <span class="material-symbols-outlined text-[16px]"
+                        >pause</span
+                      >
+                    </button>
+                    <button class="p-1 hover:text-on-surface">
+                      <span class="material-symbols-outlined text-[16px]"
+                        >restart_alt</span
+                      >
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Split Panel Main Workbench -->
+              <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[460px]">
+                <!-- LEFT PANEL: Visual Command Builder -->
+                <div
+                  class="lg:col-span-5 bg-surface-container-low/60 p-space-lg flex flex-col justify-between"
+                >
+                  <div class="space-y-space-md">
+                    <div class="flex items-center justify-between pb-space-xs">
+                      <div class="flex items-center gap-space-xs">
+                        <span
+                          class="material-symbols-outlined text-primary text-[18px]"
+                          >tune</span
+                        >
+                        <span
+                          class="font-label-md text-label-md text-on-surface font-semibold tracking-wider"
+                          >VISUAL BUILDER</span
+                        >
+                      </div>
+                      <span class="font-code-sm text-code-sm text-outline"
+                        >Utility: NMAP</span
+                      >
+                    </div>
+                    <!-- Parameter: Target Input -->
+                    <div class="space-y-1">
+                      <label
+                        class="font-label-sm text-label-sm text-on-surface-variant"
+                        >TARGET SUBNET / HOST</label
+                      >
+                      <div
+                        class="flex items-center bg-surface-container-lowest px-space-sm py-2 rounded-lg"
+                      >
+                        <span
+                          class="font-code-sm text-code-sm text-primary mr-2"
+                          >host:</span
+                        >
+                        <input
+                          class="font-code-sm text-code-sm bg-transparent text-on-surface focus:outline-none w-full"
+                          id="target-ip"
+                          type="text"
+                          value="192.168.1.1"
+                        />
+                        <span
+                          class="material-symbols-outlined text-[16px] text-outline"
+                          >lock</span
+                        >
+                      </div>
+                    </div>
+                    <!-- Parameter: Toggles Grid -->
+                    <div class="space-y-2 pt-space-xs">
+                      <label
+                        class="font-label-sm text-label-sm text-on-surface-variant"
+                        >FLAGS &amp; PROBING PARAMETERS</label
+                      >
+                      <!-- Fast Port Scan Toggle -->
+                      <div
+                        class="flag-toggle cursor-pointer flex items-center justify-between p- space-sm px-3 py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high transition-all"
+                        data-desc="Fast mode: Scans fewer ports (100) than the default scan (1,000)"
+                        data-flag="-F"
+                      >
+                        <div class="flex flex-col">
+                          <span
+                            class="font-body-sm text-body-sm font-medium text-on-surface flex items-center gap-1.5"
+                          >
+                            Fast Port Scan
+                            <span
+                              class="font-code-sm text-code-sm text-primary px-1.5 py-0.2 rounded bg-primary/10"
+                              >-F</span
+                            >
+                          </span>
+                          <span class="font-label-sm text-label-sm text-outline"
+                            >Top 100 high-priority ports</span
+                          >
+                        </div>
+                        <div
+                          class="w-8 h-4 rounded-full bg-primary-container/30 p-0.5 flex items-center toggle-switch active"
+                        >
+                          <div
+                            class="w-3 h-3 rounded-full bg-primary shadow-sm transform translate-x-4 transition-transform toggle-knob"
+                          ></div>
+                        </div>
+                      </div>
+                      <!-- Service Version Detection Toggle -->
+                      <div
+                        class="flag-toggle cursor-pointer flex items-center justify-between px-3 py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high transition-all"
+                        data-desc="Probes open ports to determine service name &amp; application version banner"
+                        data-flag="-sV"
+                      >
+                        <div class="flex flex-col">
+                          <span
+                            class="font-body-sm text-body-sm font-medium text-on-surface flex items-center gap-1.5"
+                          >
+                            Service Version Detection
+                            <span
+                              class="font-code-sm text-code-sm text-primary px-1.5 py-0.2 rounded bg-primary/10"
+                              >-sV</span
+                            >
+                          </span>
+                          <span class="font-label-sm text-label-sm text-outline"
+                            >RFC 1122 protocol banner probing</span
+                          >
+                        </div>
+                        <div
+                          class="w-8 h-4 rounded-full bg-primary-container/30 p-0.5 flex items-center toggle-switch active"
+                        >
+                          <div
+                            class="w-3 h-3 rounded-full bg-primary shadow-sm transform translate-x-4 transition-transform toggle-knob"
+                          ></div>
+                        </div>
+                      </div>
+                      <!-- Default Scripts Toggle -->
+                      <div
+                        class="flag-toggle cursor-pointer flex items-center justify-between px-3 py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high transition-all"
+                        data-desc="Runs safe default Lua vulnerability &amp; discovery scripts from NSE"
+                        data-flag="-sC"
+                      >
+                        <div class="flex flex-col">
+                          <span
+                            class="font-body-sm text-body-sm font-medium text-on-surface flex items-center gap-1.5"
+                          >
+                            Default Scripts (NSE)
+                            <span
+                              class="font-code-sm text-code-sm text-primary px-1.5 py-0.2 rounded bg-primary/10"
+                              >-sC</span
+                            >
+                          </span>
+                          <span class="font-label-sm text-label-sm text-outline"
+                            >Execute safe discovery scripts</span
+                          >
+                        </div>
+                        <div
+                          class="w-8 h-4 rounded-full bg-primary-container/30 p-0.5 flex items-center toggle-switch active"
+                        >
+                          <div
+                            class="w-3 h-3 rounded-full bg-primary shadow-sm transform translate-x-4 transition-transform toggle-knob"
+                          ></div>
+                        </div>
+                      </div>
+                      <!-- OS Fingerprinting Toggle -->
+                      <div
+                        class="flag-toggle cursor-pointer flex items-center justify-between px-3 py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high transition-all"
+                        data-desc="TCP/IP stack fingerprinting to infer remote Kernel and OS build"
+                        data-flag="-O"
+                      >
+                        <div class="flex flex-col">
+                          <span
+                            class="font-body-sm text-body-sm font-medium text-on-surface flex items-center gap-1.5"
+                          >
+                            OS Fingerprint
+                            <span
+                              class="font-code-sm text-code-sm text-outline px-1.5 py-0.2 rounded bg-surface-bright"
+                              >-O</span
+                            >
+                          </span>
+                          <span class="font-label-sm text-label-sm text-outline"
+                            >TCP/IP stack heuristic detection</span
+                          >
+                        </div>
+                        <div
+                          class="w-8 h-4 rounded-full bg-surface-bright/50 p-0.5 flex items-center toggle-switch"
+                        >
+                          <div
+                            class="w-3 h-3 rounded-full bg-outline shadow-sm transform translate-x-0 transition-transform toggle-knob"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Visual Flow Micro Indicator -->
+                  <div
+                    class="pt-space-md flex items-center justify-between bg-surface-container-lowest/60 p-space-sm rounded-lg"
+                  >
+                    <span
+                      class="font-code-sm text-code-sm text-on-surface-variant flex items-center gap-1"
+                      ><span
+                        class="material-symbols-outlined text-[16px] text-primary"
+                        >design_services</span
+                      >Bi-Directional Engine Concept</span
+                    ><span
+                      class="font-label-sm text-label-sm text-outline px-1.5 py-0.5 rounded bg-surface-container"
+                      >SIMULATED PREVIEW</span
+                    >
+                  </div>
+                </div>
+                <!-- RIGHT PANEL: CLI Output & Inspector -->
+                <div
+                  class="lg:col-span-7 bg-surface-container-lowest p-space-lg flex flex-col justify-between font-code-sm text-code-sm"
+                >
+                  <div class="space-y-space-md">
+                    <!-- Command Banner with Flag Chips -->
+                    <div
+                      class="bg-surface-container-high/60 p-space-sm rounded-lg space-y-2"
+                    >
+                      <div class="flex items-center justify-between">
+                        <span
+                          class="font-label-sm text-label-sm text-outline uppercase tracking-wider"
+                          >Constructed Real-Time Command</span
+                        >
+                        <span
+                          class="font-label-sm text-label-sm text-primary flex items-center gap-1"
+                        >
+                          <span
+                            class="w-2 h-2 rounded-full bg-primary animate-ping"
+                          ></span>
+                          Live Link
+                        </span>
+                      </div>
+                      <div
+                        class="flex flex-wrap items-center gap-1.5 bg-surface-container-lowest p-2.5 rounded-md font-code-md text-code-md text-on-surface"
+                      >
+                        <span class="text-tertiary font-semibold"
+                          >kali@termbridge</span
+                        ><span class="text-outline">:</span
+                        ><span class="text-secondary font-semibold">~#</span>
+                        <span class="text-primary-container font-semibold ml-1"
+                          >nmap</span
+                        >
+                        <!-- Interactive Hover Flag Pills -->
+                        <div class="relative group/sv inline-block">
+                          <span
+                            class="px-1.5 py-0.5 bg-primary/20 text-primary rounded cursor-help font-semibold"
+                            >-sV</span
+                          >
+                          <div
+                            class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-space-sm bg-surface-container-highest/95 backdrop-blur-md rounded-lg shadow-xl text-left font-body-sm text-body-sm text-on-surface opacity-0 pointer-events-none group-hover/sv:opacity-100 group-hover/sv:pointer-events-auto transition-opacity z-30"
+                          >
+                            <p
+                              class="font-label-sm text-label-sm text-primary uppercase font-bold mb-1"
+                            >
+                              Version Detection
+                            </p>
+                            <p
+                              class="text-on-surface-variant font-code-sm text-code-sm leading-tight"
+                            >
+                              Probes open ports to determine service/version
+                              info (RFC 1122).
+                            </p>
+                          </div>
+                        </div>
+                        <div class="relative group/sc inline-block">
+                          <span
+                            class="px-1.5 py-0.5 bg-secondary/20 text-secondary rounded cursor-help font-semibold"
+                            >-sC</span
+                          >
+                          <div
+                            class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-space-sm bg-surface-container-highest/95 backdrop-blur-md rounded-lg shadow-xl text-left font-body-sm text-body-sm text-on-surface opacity-0 pointer-events-none group-hover/sc:opacity-100 group-hover/sc:pointer-events-auto transition-opacity z-30"
+                          >
+                            <p
+                              class="font-label-sm text-label-sm text-secondary uppercase font-bold mb-1"
+                            >
+                              Default Scripts
+                            </p>
+                            <p
+                              class="text-on-surface-variant font-code-sm text-code-sm leading-tight"
+                            >
+                              Equivalent to --script=default. Performs banner
+                              grabbing &amp; security checks.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="relative group/f inline-block">
+                          <span
+                            class="px-1.5 py-0.5 bg-tertiary-container/30 text-tertiary rounded cursor-help font-semibold"
+                            >-F</span
+                          >
+                          <div
+                            class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-space-sm bg-surface-container-highest/95 backdrop-blur-md rounded-lg shadow-xl text-left font-body-sm text-body-sm text-on-surface opacity-0 pointer-events-none group-hover/f:opacity-100 group-hover/f:pointer-events-auto transition-opacity z-30"
+                          >
+                            <p
+                              class="font-label-sm text-label-sm text-tertiary uppercase font-bold mb-1"
+                            >
+                              Fast Scan
+                            </p>
+                            <p
+                              class="text-on-surface-variant font-code-sm text-code-sm leading-tight"
+                            >
+                              Scans 100 most common ports instead of 1,000
+                              standard ports.
+                            </p>
+                          </div>
+                        </div>
+                        <span
+                          class="text-on-surface font-semibold ml-1"
+                          id="cli-target-display"
+                          >192.168.1.1</span
+                        >
+                      </div>
+                    </div>
+                    <!-- Streamed Console Output -->
+                    <div
+                      class="space-y-1 text-on-surface-variant font-code-sm text-code-sm max-h-56 overflow-y-auto pr-1"
+                    >
+                      <p class="text-outline">
+                        Starting Nmap 7.94 ( https://nmap.org ) at 2025-05-18
+                        14:02 UTC
+                      </p>
+                      <p class="text-outline">
+                        Initiating SYN Stealth Scan at 14:02:01
+                      </p>
+                      <p class="text-outline">
+                        Scanning 192.168.1.1 [100 ports]...
+                      </p>
+                      <p class="text-secondary font-medium">
+                        Completed SYN Stealth Scan at 14:02:02, 0.44s elapsed
+                      </p>
+                      <p class="text-outline">
+                        Initiating Service scan at 14:02:02
+                      </p>
+                      <div class="my-2 bg-surface-container/60 p-2 rounded">
+                        <div
+                          class="grid grid-cols-3 text-outline font-label-sm text-label-sm pb-1 border-b border-surface-bright/30"
+                        >
+                          <span class="">PORT / PROTO</span>
+                          <span class="">STATE</span>
+                          <span class="">SERVICE / VERSION</span>
+                        </div>
+                        <div class="grid grid-cols-3 text-on-surface py-0.5">
+                          <span class="text-primary font-medium">22/tcp</span>
+                          <span class="text-secondary">open</span>
+                          <span class="">OpenSSH 8.9p1 Ubuntu</span>
+                        </div>
+                        <div class="grid grid-cols-3 text-on-surface py-0.5">
+                          <span class="text-primary font-medium">80/tcp</span>
+                          <span class="text-secondary">open</span>
+                          <span class="">nginx 1.18.0 (Ubuntu)</span>
+                        </div>
+                        <div class="grid grid-cols-3 text-on-surface py-0.5">
+                          <span class="text-primary font-medium">443/tcp</span>
+                          <span class="text-secondary">open</span>
+                          <span class="">nginx (SSL/TLS 1.3)</span>
+                        </div>
+                      </div>
+                      <p class="text-on-surface flex items-center gap-1">
+                        <span class="text-secondary">Nmap done:</span> 1 IP
+                        address (1 host up) scanned in 1.18 seconds
+                      </p>
+                      <div class="flex items-center gap-2 text-primary pt-1">
+                        <span class="">kali@termbridge:~#</span>
+                        <span
+                          class="inline-block w-2 h-4 bg-primary animate-pulse"
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Syntax Breakdown Legend -->
+                  <div
+                    class="mt-space-md pt-space-sm bg-surface-container/40 p-space-sm rounded-lg flex items-center justify-between text-outline text-label-sm font-label-sm"
+                  >
+                    <span class="flex items-center gap-1.5">
+                      <span
+                        class="material-symbols-outlined text-[15px] text-tertiary"
+                        >info</span
+                      >
+                      Hover flags above to inspect underlying RFC standards
+                    </span>
+                    <span class="font-code-sm text-code-sm text-primary"
+                      >0 errors • 3 ports confirmed</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- Quick Presets Bottom Bar -->
+              <div
+                class="bg-surface-container-high/90 px-space-md py-3 flex flex-wrap items-center justify-between gap-space-sm"
+              >
+                <span
+                  class="font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center gap-1.5"
+                >
+                  <span
+                    class="material-symbols-outlined text-[16px] text-primary"
+                    >bolt</span
+                  >
+                  TRY PRESET SCENARIOS:
+                </span>
+                <div class="flex flex-wrap items-center gap-space-xs">
+                  <button
+                    class="preset-btn px- space-sm px-3 py-1 rounded bg-primary/10 text-primary hover:bg-primary/20 font-code-sm text-code-sm font-medium transition-colors"
+                  >
+                    Nmap Discovery
+                  </button>
+                  <button
+                    class="preset-btn px- space-sm px-3 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest font-code-sm text-code-sm transition-colors"
+                  >
+                    Netcat Port Probe
+                  </button>
+                  <button
+                    class="preset-btn px- space-sm px-3 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest font-code-sm text-code-sm transition-colors"
+                  >
+                    Wireshark Capture Filter
+                  </button>
+                  <button
+                    class="preset-btn px- space-sm px-3 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest font-code-sm text-code-sm transition-colors"
+                  >
+                    SSH Tunneling
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- 2. PROBLEM & SOLUTION SECTION -->
+        <section
+          class="w-full bg-surface-container-lowest/50 py-space-xl relative"
+          id="oldnew"
+        >
+          <div class="max-w-7xl mx-auto px-margin">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+              <span
+                class="font-label-md text-label-md text-primary font-bold tracking-widest uppercase block mb-space-xs"
+                >THE PARADIGM SHIFT</span
+              >
+              <h2
+                class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-space-sm"
+              >
+                The Terminal Shouldn't Be a Black Box
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant">
+                Why traditional tutorials fail beginners and how visual mental
+                models accelerate mastery.
+              </p>
+            </div>
+            <!-- Comparative Two-Column Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg mb-16">
+              <!-- Traditional Card (Pain) -->
+              <div
+                class="p-space-xl rounded-xl bg-surface-container-low/70 backdrop-blur-md shadow-lg flex flex-col justify-between relative overflow-hidden group"
+              >
+                <div
+                  class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-error/40 via-error to-error/20"
+                ></div>
+                <div>
+                  <div class="flex items-center justify-between mb-space-md">
+                    <span
+                      class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-error-container/20 text-error font-medium uppercase tracking-wider"
+                      >The Antiquated Way</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-error text-[24px]"
+                      >error_outline</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-md text-headline-md text-on-surface mb-space-sm"
+                  >
+                    The Traditional Wall of Syntax
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant mb-space-lg"
+                  >
+                    Beginners are thrown into a pitch-black CLI with zero
+                    feedback, expected to blindly memorize cryptic arguments
+                    while dreading fatal mistakes.
+                  </p>
+                  <ul
+                    class="space-y-space-sm text-on-surface-variant font-body-sm text-body-sm"
+                  >
+                    <li class="flex items-start gap-space-sm">
+                      <span
+                        class="material-symbols-outlined text-error text-[18px] shrink-0 mt-0.5"
+                        >close</span
+                      >
+                      <span class=""
+                        ><strong class="text-on-surface"
+                          >Cognitive Overload:</strong
+                        >
+                        Memorizing flags like an alphabet soup without grasping
+                        what happens in the network stack.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-space-sm">
+                      <span
+                        class="material-symbols-outlined text-error text-[18px] shrink-0 mt-0.5"
+                        >close</span
+                      >
+                      <span class=""
+                        ><strong class="text-on-surface"
+                          >Cryptic Errors:</strong
+                        >
+                        Silent exits, permissions panics, and unhelpful standard
+                        error streams stalling momentum.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-space-sm">
+                      <span
+                        class="material-symbols-outlined text-error text-[18px] shrink-0 mt-0.5"
+                        >close</span
+                      >
+                      <span class=""
+                        ><strong class="text-on-surface"
+                          >Fear of Breaking Environments:</strong
+                        >
+                        Hesitation to experiment because one errant pipe could
+                        wipe local configurations.</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <!-- Abstract Broken Syntax Diagram -->
+                <div
+                  class="mt-space-lg p-space-md bg-surface-container-lowest/80 rounded-lg font-code-sm text-code-sm text-error/80"
+                >
+                  <p class="text-outline">
+                    $ nmap -A -p- -T4 --script vuln 10.0.0.1
+                  </p>
+                  <p class="text-error font-medium">
+                    FATAL: Failed to resolve host name. Did you mean -sV? Core
+                    dumped.
+                  </p>
+                </div>
+              </div>
+              <!-- TermBridge Card (Solution) -->
+              <div
+                class="p-space-xl rounded-xl bg-surface-container/70 backdrop-blur-md shadow-2xl flex flex-col justify-between relative overflow-hidden group"
+              >
+                <div
+                  class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-primary-container to-secondary"
+                ></div>
+                <div>
+                  <div class="flex items-center justify-between mb-space-md">
+                    <span
+                      class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-secondary-container/20 text-secondary font-medium uppercase tracking-wider"
+                      >The Modern Tradecraft</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-secondary text-[24px]"
+                      >verified</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-md text-headline-md text-on-surface mb-space-sm"
+                  >
+                    The TermBridge Visual Bridge
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant mb-space-lg"
+                  >
+                    We convert abstract command flags into visual architecture.
+                    Build with controls, see the terminal evolve, and
+                    internalize the fundamentals forever.
+                  </p>
+                  <ul
+                    class="space-y-space-sm text-on-surface-variant font-body-sm text-body-sm"
+                  >
+                    <li class="flex items-start gap-space-sm">
+                      <span
+                        class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5"
+                        >check_circle</span
+                      >
+                      <span class=""
+                        ><strong class="text-on-surface"
+                          >Bi-Directional Sync:</strong
+                        >
+                        Flip a GUI switch and watch the syntax generate, or type
+                        in the CLI to highlight its visual component.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-space-sm">
+                      <span
+                        class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5"
+                        >check_circle</span
+                      >
+                      <span class=""
+                        ><strong class="text-on-surface"
+                          >Instant Protocol Insights:</strong
+                        >
+                        Hover every token to unveil TCP 3-way handshakes,
+                        payload structures, and RFC origins.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-space-sm">
+                      <span
+                        class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5"
+                        >check_circle</span
+                      >
+                      <span class=""
+                        ><strong class="text-on-surface"
+                          >Safe WebAssembly Sandbox:</strong
+                        >
+                        Test aggressive exploits and probing routines in
+                        disposable, browser-isolated nodes.</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <!-- Abstract Synced Visual Bridge Diagram -->
+                <div
+                  class="mt-space-lg p-space-md bg-surface-container-lowest/80 rounded-lg font-code-sm text-code-sm text-on-surface flex items-center justify-between"
+                >
+                  <span
+                    class="text-secondary flex items-center gap-1.5 font-medium"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-secondary animate-pulse"
+                    ></span>
+                    Live Synced: TCP SYN packet • Flag: -sS
+                  </span>
+                  <span class="text-primary font-code-sm text-code-sm"
+                    >Interactive Sandbox Active</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Key Stats Ribbon -->
+            <div
+              class="w-full bg-surface-container-high/60 backdrop-blur-md rounded-xl p-space-md shadow-md grid grid-cols-1 md:grid-cols-3 gap-space-md text-center"
+            >
+              <div class="p-space-sm">
+                <p
+                  class="font-headline-lg text-headline-lg text-primary font-bold"
+                >
+                  4.8x
+                </p>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Faster Command &amp; Flag Retention
+                </p>
+              </div>
+              <div
+                class="p-space-sm border-t md:border-t-0 md:border-l border-surface-bright/30"
+              >
+                <p
+                  class="font-headline-lg text-headline-lg text-secondary font-bold"
+                >
+                  0
+                </p>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Broken Local Operating Environments
+                </p>
+              </div>
+              <div
+                class="p-space-sm border-t md:border-t-0 md:border-l border-surface-bright/30"
+              >
+                <p
+                  class="font-headline-lg text-headline-lg text-tertiary-fixed-dim font-bold"
+                >
+                  100%
+                </p>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Genuine Bash, Zsh &amp; Network CLI Tools
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 3. KEY FEATURES SECTION (3-Column Grid) -->
+        <section class="w-full py-24 relative" id="adv">
+          <div class="max-w-7xl mx-auto px-margin">
+            <!-- Section Header -->
+            <div class="max-w-2xl mb-16">
+              <span
+                class="font-label-md text-label-md text-secondary font-bold tracking-widest uppercase block mb-space-xs"
+                >ENGINEERING ADVANTAGE</span
+              >
+              <h2
+                class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-space-sm"
+              >
+                Precision Tooling for Terminal Fluency
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant">
+                Built for beginners who demand serious professional competence
+                from day one.
+              </p>
+            </div>
+            <!-- 3-Column Card Mosaic Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+              <!-- Feature 1: Guided Scenarios -->
+              <div
+                class="p-space-lg rounded-xl bg-surface-container-low/80 backdrop-blur-lg shadow-xl flex flex-col justify-between hover:bg-surface-container transition-all group"
+              >
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-space-md group-hover:scale-105 transition-transform"
+                  >
+                    <span class="material-symbols-outlined text-[28px]"
+                      >route</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-md text-headline-md text-on-surface mb-space-xs"
+                  >
+                    Guided Scenarios
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant mb-space-md"
+                  >
+                    Step-by-step interactive walkthroughs for real-world tasks
+                    like discovering open web server ports, analyzing packet
+                    headers, and privilege escalation.
+                  </p>
+                </div>
+                <!-- Mini UI Graphic: Interactive Checklist -->
+                <div
+                  class="bg-surface-container-lowest p-space-sm rounded-lg space-y-2 mt-space-md"
+                >
+                  <div
+                    class="flex items-center justify-between text-label-sm font-label-sm text-outline pb-1 border-b border-surface-bright/20"
+                  >
+                    <span class="">MISSION: RECON 01</span>
+                    <span class="text-secondary font-medium">85% COMPLETE</span>
+                  </div>
+                  <div
+                    class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface"
+                  >
+                    <span
+                      class="material-symbols-outlined text-secondary text-[16px]"
+                      >check_box</span
+                    >
+                    <span class="">Identify active subnet gateway</span>
+                  </div>
+                  <div
+                    class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface"
+                  >
+                    <span
+                      class="material-symbols-outlined text-secondary text-[16px]"
+                      >check_box</span
+                    >
+                    <span class="">Enumerate open HTTP services</span>
+                  </div>
+                  <div
+                    class="flex items-center gap-space-xs text-body-sm font-body-sm text-primary"
+                  >
+                    <span
+                      class="material-symbols-outlined text-primary text-[16px]"
+                      >radio_button_checked</span
+                    >
+                    <span class="">Intercept TLS handshake cert</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Feature 2: Live Command Builder -->
+              <div
+                class="p-space-lg rounded-xl bg-surface-container-low/80 backdrop-blur-lg shadow-xl flex flex-col justify-between hover:bg-surface-container transition-all group"
+              >
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary mb-space-md group-hover:scale-105 transition-transform"
+                  >
+                    <span class="material-symbols-outlined text-[28px]"
+                      >terminal</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-md text-headline-md text-on-surface mb-space-xs"
+                  >
+                    Live Command Builder
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant mb-space-md"
+                  >
+                    Assemble commands with visual switches while watching the
+                    exact Bash syntax generate in real time. Bi-directional
+                    editing: adjust the GUI or write raw CLI.
+                  </p>
+                </div>
+                <!-- Mini UI Graphic: Syntax Flow -->
+                <div
+                  class="bg-surface-container-lowest p-space-sm rounded-lg space-y-2 mt-space-md"
+                >
+                  <div
+                    class="flex items-center justify-between text-label-sm font-label-sm text-outline pb-1 border-b border-surface-bright/20"
+                  >
+                    <span class="">ACTIVE SYNTAX SYNC</span>
+                    <span class="text-primary font-medium">0ms LATENCY</span>
+                  </div>
+                  <div
+                    class="flex items-center gap-1 font-code-sm text-code-sm"
+                  >
+                    <span class="text-outline">GUI:</span>
+                    <span
+                      class="px-1.5 py-0.5 rounded bg-surface-bright text-on-surface text-[11px]"
+                      >[Verbose + Stealth]</span
+                    >
+                    <span class="text-secondary">→</span>
+                    <span class="text-primary font-semibold">nc -zv -w 3</span>
+                  </div>
+                  <div
+                    class="w-full bg-surface-bright/30 h-1.5 rounded-full overflow-hidden"
+                  >
+                    <div
+                      class="bg-gradient-to-r from-primary to-secondary h-full w-3/4"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Feature 3: Contextual Theory -->
+              <div
+                class="p-space-lg rounded-xl bg-surface-container-low/80 backdrop-blur-lg shadow-xl flex flex-col justify-between hover:bg-surface-container transition-all group"
+              >
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-lg bg-tertiary-container/20 flex items-center justify-center text-tertiary mb-space-md group-hover:scale-105 transition-transform"
+                  >
+                    <span class="material-symbols-outlined text-[28px]"
+                      >schema</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-md text-headline-md text-on-surface mb-space-xs"
+                  >
+                    Contextual Theory
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant mb-space-md"
+                  >
+                    Learn
+                    <em class="text-primary not-italic font-medium">why</em> a
+                    flag is used, including underlying network protocols (TCP
+                    3-way handshake, SYN/ACK), packet lifecycles, and CVE
+                    origins.
+                  </p>
+                </div>
+                <!-- Mini UI Graphic: Packet Diagram -->
+                <div
+                  class="bg-surface-container-lowest p-space-sm rounded-lg space-y-2 mt-space-md"
+                >
+                  <div
+                    class="flex items-center justify-between text-label-sm font-label-sm text-outline pb-1 border-b border-surface-bright/20"
+                  >
+                    <span class="">TCP PROTOCOL INSPECT</span>
+                    <span class="text-tertiary font-medium">SYN → SYN-ACK</span>
+                  </div>
+                  <div
+                    class="flex items-center justify-between font-code-sm text-code-sm"
+                  >
+                    <span class="px-2 py-0.5 bg-primary/10 text-primary rounded"
+                      >Client: SYN</span
+                    >
+                    <span class="text-outline">↔</span>
+                    <span
+                      class="px-2 py-0.5 bg-secondary/10 text-secondary rounded"
+                      >Target: ACK</span
+                    >
+                  </div>
+                  <p class="font-label-sm text-label-sm text-outline">
+                    RFC 793 Transmission Control Protocol
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 4. INTERACTIVE ACCORDION FAQ SECTION -->
+        <section
+          class="w-full bg-surface-container-low/40 py-24 relative"
+          id="faq"
+        >
+          <div class="max-w-4xl mx-auto px-margin">
+            <!-- Section Header -->
+            <div class="text-center max-w-xl mx-auto mb-16">
+              <span
+                class="font-label-md text-label-md text-primary font-bold tracking-widest uppercase block mb-space-xs"
+                >CLARIFICATIONS</span
+              >
+              <h2
+                class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-space-sm"
+              >
+                Frequently Asked Questions
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant">
+                Everything you need to know about our learning methodology and
+                platform stack.
+              </p>
+            </div>
+            <!-- Interactive Accordion Stack -->
+            <div class="space-y-space-md" id="faq-accordion">
+              <!-- FAQ 1 -->
+              <div
+                class="accordion-item rounded-xl bg-surface-container/80 backdrop-blur-md overflow-hidden transition-all shadow-md"
+              >
+                <button
+                  aria-expanded="false"
+                  class="accordion-btn w-full p-space-lg flex items-center justify-between text-left hover:text-primary transition-colors"
+                >
+                  <span
+                    class="font-headline-sm text-headline-sm text-on-surface font-semibold"
+                    >Is this a point-and-click GUI that hacks for me?</span
+                  >
+                  <span
+                    class="material-symbols-outlined text-[24px] text-outline accordion-icon transition-transform"
+                    style="transform: rotate(0deg)"
+                    >expand_more</span
+                  >
+                </button>
+                <div
+                  class="accordion-content max-h-0 overflow-hidden transition-all duration-300 px-space-lg"
+                  style="max-height: 0px"
+                >
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant pb-space-lg"
+                  >
+                    No. Our goal is to make you proficient in the actual
+                    terminal. The app acts as training wheels to help you
+                    understand command structures, underlying protocols, and
+                    syntax patterns until you can type them effortlessly from
+                    memory.
+                  </p>
+                </div>
+              </div>
+              <!-- FAQ 2 -->
+              <div
+                class="accordion-item rounded-xl bg-surface-container/80 backdrop-blur-md overflow-hidden transition-all shadow-md"
+              >
+                <button
+                  aria-expanded="false"
+                  class="accordion-btn w-full p-space-lg flex items-center justify-between text-left hover:text-primary transition-colors"
+                >
+                  <span
+                    class="font-headline-sm text-headline-sm text-on-surface font-semibold"
+                    >How is this different from cheat sheets or online
+                    labs?</span
+                  >
+                  <span
+                    class="material-symbols-outlined text-[24px] text-outline accordion-icon transition-transform"
+                    style="transform: rotate(0deg)"
+                    >expand_more</span
+                  >
+                </button>
+                <div
+                  class="accordion-content max-h-0 overflow-hidden transition-all duration-300 px-space-lg"
+                  style="max-height: 0px"
+                >
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant pb-space-lg"
+                  >
+                    Cheat sheets lack context and theory, while complex cloud
+                    labs can be overwhelming and punitive. TermBridge bridges
+                    syntax visualizers directly with hands-on practice, giving
+                    you real-time flag breakdowns and immediate feedback without
+                    punitive resets.
+                  </p>
+                </div>
+              </div>
+              <!-- FAQ 3 -->
+              <div
+                class="accordion-item rounded-xl bg-surface-container/80 backdrop-blur-md overflow-hidden transition-all shadow-md"
+              >
+                <button
+                  aria-expanded="false"
+                  class="accordion-btn w-full p-space-lg flex items-center justify-between text-left hover:text-primary transition-colors"
+                >
+                  <span
+                    class="font-headline-sm text-headline-sm text-on-surface font-semibold"
+                    >Which security tools and protocols are covered?</span
+                  >
+                  <span
+                    class="material-symbols-outlined text-[24px] text-outline accordion-icon transition-transform"
+                    style="transform: rotate(0deg)"
+                    >expand_more</span
+                  >
+                </button>
+                <div
+                  class="accordion-content max-h-0 overflow-hidden transition-all duration-300 px-space-lg"
+                  style="max-height: 0px"
+                >
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant pb-space-lg"
+                  >
+                    We cover core networking and discovery tools including Nmap,
+                    Netcat, Dig/Nslookup, Tcpdump, Curl/HTTP inspection, SSH
+                    tunneling, and basic Bash scripting patterns — all aligned
+                    with foundational OSCP and CompTIA Security+ objectives.
+                  </p>
+                </div>
+              </div>
+              <!-- FAQ 4 -->
+              <div
+                class="accordion-item rounded-xl bg-surface-container/80 backdrop-blur-md overflow-hidden transition-all shadow-md"
+              >
+                <button
+                  aria-expanded="false"
+                  class="accordion-btn w-full p-space-lg flex items-center justify-between text-left hover:text-primary transition-colors"
+                >
+                  <span
+                    class="font-headline-sm text-headline-sm text-on-surface font-semibold"
+                    >Do I need Linux or complex virtualization installed?</span
+                  >
+                  <span
+                    class="material-symbols-outlined text-[24px] text-outline accordion-icon transition-transform"
+                    style="transform: rotate(0deg)"
+                    >expand_more</span
+                  >
+                </button>
+                <div
+                  class="accordion-content max-h-0 overflow-hidden transition-all duration-300 px-space-lg"
+                  style="max-height: 0px"
+                >
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant pb-space-lg"
+                  >
+                    Zero local configuration required. TermBridge runs
+                    completely in the browser powered by isolated WebAssembly
+                    sandboxes, allowing you to learn from any Chromebook, Mac,
+                    Windows laptop, or tablet.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 5. SECONDARY CTA & BOTTOM CONVERSION BANNER -->
+        <section class="w-full py-24 relative overflow-hidden" id="join">
+          <div class="max-w-5xl mx-auto px-margin">
+            <div
+              class="relative rounded-xl bg-surface-container-high/80 backdrop-blur-2xl p-space-xl sm:p-16 text-center shadow-2xl overflow-hidden"
+            >
+              <!-- Radial Glow Accent Behind Content -->
+              <div
+                class="pointer-events-none absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-primary-container/20 blur-3xl opacity-50"
+              ></div>
+              <div
+                class="pointer-events-none absolute -bottom-32 right-10 w-72 h-72 bg-secondary/15 blur-3xl opacity-40"
+              ></div>
+              <div class="relative z-10 max-w-2xl mx-auto space-y-space-md">
+                <span
+                  class="font-label-md text-label-md text-secondary font-bold tracking-widest uppercase block"
+                  >LAUNCHING SUMMER 2025</span
+                >
+                <h2
+                  class="font-headline-lg text-headline-lg text-on-surface tracking-tight"
+                >
+                  Ready to conquer the command line?
+                </h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">
+                  Join 2,400+ aspiring penetration testers, network defenders,
+                  and systems engineers in the early preview.
+                </p>
+                <!-- Trust Signals -->
+                <!-- 5. SECONDARY CTA & BOTTOM CONVERSION BANNER FORM -->
+                <form
+                  class="flex flex-col sm:flex-row items-center justify-center gap-space-sm w-full max-w-md mx-auto pt-space-xs"
+                  id="footer-beta-form"
+                >
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="b806db70-90d9-496d-a483-37518dc0cf56"
+                  />
+                  <div class="relative w-full">
+                    <span
+                      class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]"
+                      >mail</span
+                    >
+                    <input
+                      class="w-full pl-10 pr-4 py-3 rounded-xl bg-surface-container-lowest/80 border border-surface-bright/30 focus:border-primary text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none transition-all"
+                      id="footer-email-input"
+                      name="email"
+                      placeholder="Enter your work or student email..."
+                      required=""
+                      type="email"
+                    />
+                  </div>
+                  <button
+                    class="w-full sm:w-auto shrink-0 px-space-lg py-3 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-headline-sm text-label-md font-semibold tracking-wide shadow-[0_0_24px_rgba(6,182,212,0.4)] hover:shadow-[0_0_32px_rgba(6,182,212,0.6)] active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                    id="footer-submit-btn"
+                    type="submit"
+                  >
+                    <span id="footer-btn-text" class="flex items-center gap-2">
+                      <span>Join the Closed Beta</span>
+                      <span class="material-symbols-outlined text-[18px]"
+                        >arrow_forward</span
+                      >
+                    </span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- Vanilla JS Interactions for Hero Builder, Presets, and FAQ Accordion -->
+      <script src="script.js"></script>
+    </main>
+    <footer
+      class="w-full bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] py-space-xl"
+    >
+      <div class="max-w-7xl mx-auto px-margin">
+        <div
+          class="flex flex-col md:flex-row items-center gap-space-lg pb-space-lg justify-center text-center"
+        >
+          <div class="flex items-center gap-space-md">
+            <div
+              class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container text-secondary font-code-sm text-code-sm"
+            >
+              <span
+                class="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse"
+              ></span
+              ><span class="">SYSTEMS ALL OPERATIONAL</span>
+            </div>
+            <span class="font-code-sm text-code-sm text-outline"
+              >v0.0-core</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
